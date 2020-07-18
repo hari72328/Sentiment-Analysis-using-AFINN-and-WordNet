@@ -1,5 +1,5 @@
 TO RUN THE APPLICATION,
-         Go to FINAL APPLICATION-->main.exe
+         Go to FINAL APPLICATION-->main.exe   .
 Sentiment-Analysis-using-AFINN-and-WordNet:
        This project will have an interface which contains two input fields 
        1.A search query(i.e to get the tweets regarding the search query in the twitter) 
