@@ -1,25 +1,19 @@
 # 🧠 Sentiment Analysis using AFINN and WordNet
 
-> A Python desktop app that fetches live tweets for any search query and analyses their sentiment using two different NLP algorithms — **AFINN** and **WordNet (SentiWordNet)** — with results displayed as a pie chart.
-
----
+> A Python desktop app that fetches live tweets for any search query and analyses their sentiment using two different NLP algorithms (**AFINN** and **WordNet/SentiWordNet**) with results displayed as a pie chart.
 
 ## What it does
 
 1. Enter a **search query** (e.g. `climate change`, `iPhone`, `elections`)
 2. Enter how many **tweets** to analyse
-3. Choose an algorithm — **AFINN** or **WordNet**
+3. Choose an algorithm: **AFINN** or **WordNet**
 4. App fetches live tweets via Twitter API, preprocesses them, runs sentiment scoring, and displays a **pie chart** of Positive / Negative / Neutral breakdown
-
----
 
 ## Demo
 
 ▶️ **[Watch demo on YouTube](https://www.youtube.com/watch?v=N8VjJi-udO4&t=10s)**
 
 > *Old demo video — the app works, the narration is... enthusiastic. Bear with it.*
-
----
 
 ## How it works
 
@@ -47,22 +41,18 @@ User Input (query + tweet count)
        Positive / Negative / Neutral %
 ```
 
----
-
 ## Algorithms
 
 ### AFINN
-- Uses the AFINN lexicon — a list of ~3,300 English words each assigned a sentiment score from -5 (very negative) to +5 (very positive)
+- Uses the AFINN lexicon, a list of ~3,300 English words each assigned a sentiment score from -5 (very negative) to +5 (very positive)
 - Scores each tweet and classifies as Positive / Negative / Neutral
 
 ### WordNet (SentiWordNet)
 - Uses NLTK's **SentiWordNet** corpus
-- Tokenises tweets → removes stopwords → POS tagging (Noun, Verb, Adj, Adv)
+- Tokenises tweets, removes stopwords, applies POS tagging (Noun, Verb, Adj, Adv)
 - Looks up each word's **positive score** and **negative score** in SentiWordNet
 - Falls back to **lemmatization** then **stemming** if the word isn't found directly
 - Aggregates scores per tweet to determine overall sentiment
-
----
 
 ## Tech Stack
 
@@ -71,12 +61,10 @@ User Input (query + tweet count)
 | GUI | Tkinter |
 | Twitter API | Tweepy |
 | Sentiment (1) | AFINN |
-| Sentiment (2) | NLTK — SentiWordNet, POS tagger, Lemmatizer, PorterStemmer |
+| Sentiment (2) | NLTK (SentiWordNet, POS tagger, Lemmatizer, PorterStemmer) |
 | Data handling | Pandas |
 | Visualisation | Matplotlib |
 | Text cleaning | Regex |
-
----
 
 ## Setup
 
@@ -112,27 +100,21 @@ access_token_secret = "YOUR_ACCESS_TOKEN_SECRET"
 python main.py
 ```
 
----
-
 ## Project Structure
 
 ```
-├── main.py                         # Tkinter GUI — search input + algorithm buttons
+├── main.py                         # Tkinter GUI, search input + algorithm buttons
 ├── datapreprocessing.py            # Tweet fetch, text cleaning, AFINN & WordNet logic
 ├── image.png                       # Background image for the GUI
 └── Final code and application/     # Compiled .exe for Windows
 ```
 
----
-
 ## Output
 
 The app plots a **pie chart** showing:
 - % Positive tweets
-- % Negative tweets  
+- % Negative tweets
 - % Neutral tweets
 - Total tweet count and breakdown in the legend
 
----
-
-*Mini project — NLP sentiment analysis comparing lexicon-based (AFINN) vs corpus-based (WordNet) approaches on live Twitter data.*
+*Mini project comparing lexicon-based (AFINN) vs corpus-based (WordNet) sentiment analysis on live Twitter data.*
