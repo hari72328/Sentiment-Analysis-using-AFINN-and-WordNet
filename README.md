@@ -13,7 +13,7 @@
 
 ▶️ **[Watch demo on YouTube](https://www.youtube.com/watch?v=N8VjJi-udO4&t=10s)**
 
-> *Old demo video — the app works, the narration is... enthusiastic. Bear with it.*
+> *Old demo video - the app works, the narration is... enthusiastic. Bear with it.*
 
 ## How it works
 
